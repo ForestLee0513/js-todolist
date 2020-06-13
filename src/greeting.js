@@ -1,7 +1,9 @@
 //인풋 태그
 const userInput = document.querySelector(".userInput"),
-  form = document.querySelector(".js-form"),
-  info = document.querySelector(".js-userInfo");
+  userForm = document.querySelector(".js-form"),
+  userInfo = document.querySelector(".js-userInfo"),
+  toDoForm = document.querySelector(".js-toDoForm"),
+  toDoList = document.querySelector(".js-toDoList");
 
 //유저 로컬 스토리지 이름
 const USER_LS = "Username",
@@ -20,14 +22,16 @@ function submitInput(e) {
 }
 
 function askName() {
-  form.classList.add(SHOWING_CN);
-  form.addEventListener("submit", submitInput);
+  userForm.classList.add(SHOWING_CN);
+  userForm.addEventListener("submit", submitInput);
 }
 
 function paintName(value) {
-  form.classList.remove(SHOWING_CN);
-  info.classList.add(SHOWING_CN);
-  info.innerHTML = `welcome ${value}`;
+  userForm.classList.remove(SHOWING_CN);
+  userInfo.classList.add(SHOWING_CN);
+  userInfo.innerHTML = `welcome ${value}`;
+  toDoForm.classList.add(SHOWING_CN);
+  toDoList.classList.add(SHOWING_CN);
 }
 
 //로컬 스토리지 존재 여부 확인

@@ -1,6 +1,6 @@
 @import "./reset.css";
 
-.form,.userInfo{
+.form,.userInfo,.toDoForm,.toDoList{
     display: none;
 }
 

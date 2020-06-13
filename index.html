@@ -10,12 +10,25 @@
     <div class="root">
         <h1 class="clock24"></h1>
         <br />
-        <form class="js-form form">
-            <input type="text" class="userInput"/>
-        </form>
-        <h2 class="js-userInfo userInfo"></h2>
+        <div class="greeting">
+            <form class="js-form form">
+                <input type="text" class="userInput" placeholder="write your name." />
+            </form>
+            <h2 class="js-userInfo userInfo"></h2>
+        </div>
+        <br/>
+        <div class="toDo">
+            <form class="js-toDoForm toDoForm">
+                <input type="text" class="toDoInput" placeholder="write to do." />
+            </form>
+            <br/>
+            <ul class="js-toDoList toDoList">
+    
+            </ul>
+        </div>
     </div>
     <script src="./src/clock.js"></script>
     <script src="./src/greeting.js"></script>
+    <script src="./src/todo.js"></script>
 </body>
 </html>
