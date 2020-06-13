@@ -1,1 +1,10 @@
-@import "./reset.css"
+@import "./reset.css";
+
+.form,.userInfo{
+    display: none;
+}
+
+.showing{
+    display: block;
+}
+
