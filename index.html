@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-do list</title>
-    <link rel="stylesheet" href="./src/style.css">
-</head>
-<body>
-    <div class="root">
-        <div class="clock">
-            <h1 class="clock24"></h1>
-        </div>
-        <br />
-        <div class="greeting">
-            <form class="js-form form">
-                <input type="text" class="userInput" placeholder="write your name." />
-            </form>
-            <h2 class="js-userInfo userInfo"></h2>
-        </div>
-        <br/>
-        <div class="toDo">
-            <form class="js-toDoForm toDoForm">
-                <input type="text" class="toDoInput" placeholder="write to do." />
-            </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To-do list</title>
+        <link rel="stylesheet" href="./src/style.css">
+    </head>
+    <body>
+        <div class="root">
+            <div class="clock">
+                <h1 class="clock24"></h1>
+            </div>
+            <br />
+            <div class="greeting">
+                <form class="js-form form">
+                    <input type="text" class="userInput" placeholder="write your name." />
+                </form>
+                <h2 class="js-userInfo userInfo"></h2>
+            </div>
             <br/>
-            <ul class="js-toDoList toDoList">
-    
-            </ul>
+            <div class="toDo">
+                <form class="js-toDoForm toDoForm">
+                    <input type="text" class="toDoInput" placeholder="write to do." />
+                </form>
+                <br/>
+                <ul class="js-toDoList toDoList">
+        
+                </ul>
+            </div>
+            <br/>
+            <div class="weather">
+                <h4 class="weather_info"></h4>
+            </div>
         </div>
-        <br/>
-        <div class="weather">
-            
-        </div>
-    </div>
-    <script src="./src/clock.js"></script>
-    <script src="./src/greeting.js"></script>
-    <script src="./src/todo.js"></script>
-</body>
+        <script src="./src/clock.js"></script>
+        <script src="./src/greeting.js"></script>
+        <script src="./src/todo.js"></script>
+        <script src="./src/weather.js"></script>
+    </body>
 </html>
