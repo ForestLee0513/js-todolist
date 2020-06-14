@@ -1,25 +1,41 @@
-//html 태그 불러오기
-const clock24 = document.querySelector(".clock24");
-
-//css 스타일
-const show = "show";
-
 //현재시간 받아오기
 function getDate24() {
-  const hour = new Date().getHours();
-  const minute = new Date().getMinutes();
-  const second = new Date().getSeconds();
+  const digital = document.querySelector(".clock24");
+  const day = new Date();
+  const hh = day.getHours();
+  const mm = day.getMinutes();
+  if (hh > 12) {
+    digital.innerHTML = `PM ${hh % 12 < 10 ? `0${hh % 12}` : hh % 12}:${
+      mm < 10 ? `0${mm}` : mm
+    }`;
+  } else {
+    digital.innerHTML = `AM ${hh % 12 < 10 ? `0${hh % 12}` : hh % 12}:${
+      mm < 10 ? `0${mm}` : mm
+    }`;
+  }
+}
 
-  clock24.innerHTML = `${hour < 10 ? `0${hour}` : hour} : ${
-    minute < 10 ? `0${minute}` : minute
-  } : ${second < 10 ? `0${second}` : second}`;
+function analog() {
+  const deg = 6;
+  const hr = document.querySelector("#hr");
+  const mn = document.querySelector("#mn");
+  const sc = document.querySelector("#sc");
+  let day = new Date();
+  let hh = day.getHours() * 30;
+  let mm = day.getMinutes() * deg;
+  let ss = day.getSeconds() * deg;
+  hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+  mn.style.transform = `rotateZ(${mm}deg)`;
+  sc.style.transform = `rotateZ(${ss}deg)`;
 }
 
 //기본동작
 function init() {
   getDate24();
+  analog();
   setInterval(() => {
     getDate24();
+    analog();
   }, 1000);
 }
 

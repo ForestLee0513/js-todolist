@@ -5,37 +5,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To-do list</title>
         <link rel="stylesheet" href="./src/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="root">
-            <div class="clock">
-                <h1 class="clock24"></h1>
-            </div>
-            <br />
-            <div class="greeting">
-                <form class="js-form form">
-                    <input type="text" class="userInput" placeholder="write your name." />
-                </form>
-                <h2 class="js-userInfo userInfo"></h2>
-            </div>
-            <br/>
-            <div class="toDo">
-                <form class="js-toDoForm toDoForm">
-                    <input type="text" class="toDoInput" placeholder="write to do." />
-                </form>
-                <br/>
-                <ul class="js-toDoList toDoList">
-        
-                </ul>
-            </div>
-            <br/>
-            <div class="weather">
-                <h4 class="weather_info"></h4>
+            <div class="body">
+                <div class="clock">
+                    <div class="info">
+                        <div class="weather">
+                            <div class="weather_info">
+                                <h3 class="weather_temp"></h3>
+                                <h3 class="weather_place"></h3>
+                            </div>
+                        </div>
+                        <div class="digital_clock">
+                            <h1 class="clock24"></h1>
+                        </div>
+                    </div>
+                    <div class="hour">
+                        <div class="hr" id="hr"></div>
+                    </div>
+                    <div class="min">
+                        <div class="mn" id="mn"></div>
+                    </div>
+                    <div class="sec">
+                        <div class="sc" id="sc"></div>
+                    </div>
+                </div>
+                <div class="user">
+                    <div class="greeting">
+                        <form class="js-form form">
+                            <input type="text" class="userInput" placeholder="write your name." />
+                        </form>
+                        <h2 class="js-userInfo userInfo"></h2>
+                    </div>
+                    <br/>
+                    <div class="toDo">
+                        <form class="js-toDoForm toDoForm">
+                            <input type="text" class="toDoInput" placeholder="write to do." />
+                        </form>
+                        <br/>
+                        <ul class="js-toDoList toDoList">
+                        </ul>
+                    </div>
+                    <br/>
+                </div>
             </div>
         </div>
         <script src="./src/clock.js"></script>
         <script src="./src/greeting.js"></script>
         <script src="./src/todo.js"></script>
         <script src="./src/weather.js"></script>
+        <script src="./src/bg.js"></script>
     </body>
 </html>

@@ -1,10 +1,187 @@
 @import "./reset.css";
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .form,.userInfo,.toDoForm,.toDoList{
     display: none;
+    color:white;
+}
+
+.userInfo{
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+input{
+    border:0;
+    background: rgba(0,0,0,0);
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    color:white;
+    height: 30px;
+    width: 200px;  
+}
+
+input::placeholder{
+    color:white;
 }
 
 .showing{
     display: block;
 }
 
+li{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+span{
+    color:white;
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+button{
+    border: 0;
+    width: 25px;
+    height: 25px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color:white;
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+body{
+    display:block;
+    background: rgba(0,0,0,0.2);
+}
+
+.body{
+    display:flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.clock{
+    min-height: 350px;
+    min-width: 350px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: white;
+    z-index: 100000;
+    border-radius: 50%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.hour,.min,.sec{
+    position: absolute;
+}
+
+.hour,.hr{
+    width: 160px;
+    height: 160px;
+}
+.min,.mn{
+    width: 190px;
+    height: 190px;
+}
+.sec,.sc{
+    width: 230px;
+    height: 230px;
+}
+
+.hr,.mn,.sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background:white;
+    z-index:10;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background:white;
+    z-index:11;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background:white;
+    z-index:12;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.digital_clock{
+        margin-top: 100px;
+}
+
+.clock24{
+    color: white;
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.weather{
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.weather_temp,.weather_place{
+    color:white;
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.user{
+    margin-left: 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95px;
+}

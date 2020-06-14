@@ -5,7 +5,8 @@ const COORDS = "coords";
 const API_KEY = "241f71bb5e809bbfd036e6edf757b540";
 
 //날씨 관련 html 태그
-const weather = document.querySelector(".weather_info");
+const temp = document.querySelector(".weather_temp");
+const place = document.querySelector(".weather_place");
 
 function getWeather(lat, lng) {
   fetch(
@@ -15,9 +16,11 @@ function getWeather(lat, lng) {
       return responce.json();
     })
     .then(function (json) {
+      console.log(json);
       const temperature = json.main.temp;
-      const place = json.name;
-      weather.innerText = `${temperature} @ ${place}`;
+      const currPlace = json.name;
+      temp.innerText = `${temperature}°C`;
+      place.innerText = `${currPlace}`;
     });
 }
 
